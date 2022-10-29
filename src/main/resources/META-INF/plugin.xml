@@ -10,15 +10,7 @@
       <add-to-group anchor="last" group-id="GenerateGroup"/>
     </action>
   </actions>
-  <change-notes><![CDATA[
-      <ul>
-        <li>Fix bug: fix VirtualFile can't check the file exists, so the Jpa Support cannot load driver class.</li>
-        <li>Fix compatibility issues with some idea tips</li>
-        <li>Fix bug: missing mysql 6.0.6 driver</li>
-        <li>Fix bug: the new version idea has a bug with insufficient permissions when creating a directory</li>
-        <li>When the driver is Oracle(NOT SUPPORT), the primary key increment mode is sequence</li>
-      </ul>
-    ]]>
+  <change-notes>
   </change-notes>
   <depends>com.intellij.modules.platform</depends>
   <depends>com.intellij.modules.lang</depends>
@@ -26,46 +18,18 @@
   <depends optional="true" config-file="withDatabasePlugin.xml">com.intellij.database</depends>
 
   <description><![CDATA[
-      <p>Generate entity/repository class for JPA/Lombok/Spring Data JPA.</p>
-      <p>Support internationalization. Currently supported languages are <a href="https://github.com/carter-ya/idea-plugin-jpa-support/blob/master/README.md">English</a>, <a href="https://github.com/carter-ya/idea-plugin-jpa-support/blob/master/README_zh.md">简体中文</a>.</p>
+      <p>ECI生成工具</p>
       <p>Support all databases.</p>
       <p>Support generate source code from Database plugin</p>
       <p>Support custom generate code template</p>
       <p>Support custom db type mapping</p>
-      <p>Mac: Command + N or Windows: Alt + Insert and select <b>Jpa Entities</b></p>
-      <h3>Templates</h3>
-      <ol>Template directories
-        <li>Module template directory:{module}/.idea/JPA Support/template</li>
-        <li>Project template directory:{project}/.idea/JPA Support/template"</li>
-        <li>Home template directory:{user.home}/.JPA Support/template</li>
-      </ol>
-      <ol>Templates
-          <li>Controller.vm</li>
-          <li>DTO.vm</li>
-          <li>JpaEntity.vm</li>
-          <li>JpaRepository.vm</li>
-          <li>MapperXml.vm</li>
-          <li>MybatisGenerateConfig.vm</li>
-          <li>QueryVO.vm</li>
-          <li>SaveVO.vm</li>
-          <li>Service.vm</li>
-          <li>Service-MybatisPlus.vm</li>
-          <li>Service-TkMybatis.vm</li>
-          <li>UpdateVO.vm</li>
-      </ol>
-      <a href="https://github.com/carter-ya/idea-plugin-jpa-support">README</a> <br>
-      <img src="https://github.com/carter-ya/idea-plugin-jpa-support/blob/master/doc/set_database_connection.png?raw=true" alt="Use tips.">
-      <br> <br>
-      <img src="https://github.com/carter-ya/idea-plugin-jpa-support/blob/master/doc/generate_setting.png?raw=true" alt="Use tips.">
-      <br> <br>
-      <img src="https://github.com/carter-ya/idea-plugin-jpa-support/blob/master/doc/select_and_generate.png?raw=true" alt="Use tips.">
     ]]></description>
 
   <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
   <!--  <idea-version since-build="171" until-build="191.*"/>-->
   <extensions defaultExtensionNs="com.intellij">
     <applicationConfigurable parentId="tools" instance="com.ifengxue.plugin.state.SettingsConfigurable"
-        id="com.ifengxue.plugin.state.SettingsConfigurable" displayName="JPA Support"/>
+        id="com.ifengxue.plugin.state.SettingsConfigurable" displayName="ECI JPA"/>
 
     <applicationService serviceImplementation="com.ifengxue.plugin.state.SettingsState"/>
 
@@ -76,12 +40,12 @@
   <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
        on how to target different products -->
 
-  <id>com.ifengxue.plugin.jpa-support</id>
+  <id>com.ifengxue.plugin.jpa-eci</id>
   <idea-version since-build="211.*"/>
-  <name>JPA Support</name>
+  <name>ECI生成器</name>
 
-  <vendor email="liukefeng2008@hotmail.com" url="https://github.com/carter-ya/idea-plugin-jpa-support">
-    https://github.com/carter-ya/idea-plugin-jpa-support
+  <vendor email="eci@hotmail.com" url="https://www.ecinnovations.com.cn/">
+    ECI
   </vendor>
 
   <version>2.1.0-RC2</version>

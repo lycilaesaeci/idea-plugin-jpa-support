@@ -23,7 +23,7 @@
 package $package;
 
 #end
-import org.springframework.data.jpa.repository.JpaRepository;
+import com.eci.context.context.core.BaseRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 #foreach($importClass in $importClassList)
 import $importClass;
@@ -32,6 +32,6 @@ import $importClass;
 ## add new empty line
 
 #end
-public interface $simpleName extends JpaRepository<$entitySimpleName, $primaryKeyDataType>, JpaSpecificationExecutor<$entitySimpleName> {
+public interface $simpleName extends BaseRepository<$entitySimpleName, $primaryKeyDataType> {
 
 }

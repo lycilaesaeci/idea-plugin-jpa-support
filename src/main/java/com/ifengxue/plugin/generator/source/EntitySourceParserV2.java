@@ -65,10 +65,10 @@ public class EntitySourceParserV2 extends AbstractIDEASourceParser {
         classAnnotations.add("Accessors(chain = true)");
       }
 
-      if (!tablesConfig.getExtendsEntityName().isEmpty()) {
-        importClassList.add("lombok.EqualsAndHashCode");
-        classAnnotations.add("EqualsAndHashCode(callSuper = true)");
-      }
+//      if (!tablesConfig.getExtendsEntityName().isEmpty()) {
+//        importClassList.add("lombok.EqualsAndHashCode");
+//        classAnnotations.add("EqualsAndHashCode(callSuper = true)");
+//      }
     }
 
     // use Swagger UI 
